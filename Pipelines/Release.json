@@ -1,0 +1,407 @@
+{
+  "source": 2,
+  "revision": 3,
+  "description": null,
+  "createdBy": {
+    "displayName": "Gopi",
+    "url": "https://spsproduks1.vssps.visualstudio.com/A0490a459-e2ff-4fa9-a8ef-30a260b110c5/_apis/Identities/22b68ab3-e316-4092-9472-ade4bb921cd2",
+    "_links": { "avatar": { "href": "https://dev.azure.com/azure-everything/_apis/GraphProfile/MemberAvatars/msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi" } },
+    "id": "22b68ab3-e316-4092-9472-ade4bb921cd2",
+    "uniqueName": "gopi_krishnag@hotmail.com",
+    "imageUrl": "https://dev.azure.com/azure-everything/_apis/GraphProfile/MemberAvatars/msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi",
+    "descriptor": "msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi"
+  },
+  "createdOn": "2020-04-07T14:18:31.980Z",
+  "modifiedBy": {
+    "displayName": "Gopi",
+    "url": "https://spsproduks1.vssps.visualstudio.com/A0490a459-e2ff-4fa9-a8ef-30a260b110c5/_apis/Identities/22b68ab3-e316-4092-9472-ade4bb921cd2",
+    "_links": { "avatar": { "href": "https://dev.azure.com/azure-everything/_apis/GraphProfile/MemberAvatars/msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi" } },
+    "id": "22b68ab3-e316-4092-9472-ade4bb921cd2",
+    "uniqueName": "gopi_krishnag@hotmail.com",
+    "imageUrl": "https://dev.azure.com/azure-everything/_apis/GraphProfile/MemberAvatars/msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi",
+    "descriptor": "msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi"
+  },
+  "modifiedOn": "2020-04-09T17:00:39.743Z",
+  "isDeleted": false,
+  "lastRelease": {
+    "id": 8,
+    "name": "Release-3",
+    "artifacts": [],
+    "_links": {},
+    "description": "",
+    "releaseDefinition": {
+      "id": 3,
+      "projectReference": null,
+      "_links": {}
+    },
+    "createdOn": "2020-04-07T21:10:12.173Z",
+    "createdBy": {
+      "displayName": "Gopi",
+      "url": "https://spsproduks1.vssps.visualstudio.com/A0490a459-e2ff-4fa9-a8ef-30a260b110c5/_apis/Identities/22b68ab3-e316-4092-9472-ade4bb921cd2",
+      "_links": { "avatar": { "href": "https://dev.azure.com/azure-everything/_apis/GraphProfile/MemberAvatars/msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi" } },
+      "id": "22b68ab3-e316-4092-9472-ade4bb921cd2",
+      "uniqueName": "gopi_krishnag@hotmail.com",
+      "imageUrl": "https://dev.azure.com/azure-everything/_apis/GraphProfile/MemberAvatars/msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi",
+      "descriptor": "msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi"
+    }
+  },
+  "variables": {},
+  "variableGroups": [],
+  "environments": [
+    {
+      "id": 3,
+      "name": "Stage 1",
+      "rank": 1,
+      "owner": {
+        "displayName": "Gopi",
+        "url": "https://spsproduks1.vssps.visualstudio.com/A0490a459-e2ff-4fa9-a8ef-30a260b110c5/_apis/Identities/22b68ab3-e316-4092-9472-ade4bb921cd2",
+        "_links": { "avatar": { "href": "https://dev.azure.com/azure-everything/_apis/GraphProfile/MemberAvatars/msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi" } },
+        "id": "22b68ab3-e316-4092-9472-ade4bb921cd2",
+        "uniqueName": "gopi_krishnag@hotmail.com",
+        "imageUrl": "https://dev.azure.com/azure-everything/_apis/GraphProfile/MemberAvatars/msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi",
+        "descriptor": "msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi"
+      },
+      "variables": {},
+      "variableGroups": [],
+      "preDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": true,
+            "isNotificationOn": false,
+            "id": 7
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": false,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 1
+        }
+      },
+      "deployStep": { "id": 8 },
+      "postDeployApprovals": {
+        "approvals": [
+          {
+            "rank": 1,
+            "isAutomated": true,
+            "isNotificationOn": false,
+            "id": 9
+          }
+        ],
+        "approvalOptions": {
+          "requiredApproverCount": null,
+          "releaseCreatorCanBeApprover": false,
+          "autoTriggeredAndPreviousEnvironmentApprovedCanBeSkipped": false,
+          "enforceIdentityRevalidation": false,
+          "timeoutInMinutes": 0,
+          "executionOrder": 2
+        }
+      },
+      "deployPhases": [
+        {
+          "deploymentInput": {
+            "parallelExecution": { "parallelExecutionType": 0 },
+            "agentSpecification": { "identifier": "vs2017-win2016" },
+            "skipArtifactsDownload": false,
+            "artifactsDownloadInput": { "downloadInputs": [] },
+            "queueId": 18,
+            "demands": [],
+            "enableAccessToken": false,
+            "timeoutInMinutes": 0,
+            "jobCancelTimeoutInMinutes": 1,
+            "condition": "succeeded()",
+            "overrideInputs": {}
+          },
+          "rank": 1,
+          "phaseType": 1,
+          "name": "Run on agent",
+          "refName": null,
+          "workflowTasks": [
+            {
+              "environment": {},
+              "taskId": "497d490f-eea7-4f2b-ab94-48d9c1acdcb1",
+              "version": "4.*",
+              "name": "Deploy Azure App Service",
+              "refName": "",
+              "enabled": true,
+              "alwaysRun": false,
+              "continueOnError": false,
+              "timeoutInMinutes": 0,
+              "definitionType": null,
+              "overrideInputs": {},
+              "condition": "succeeded()",
+              "inputs": {
+                "ConnectionType": "AzureRM",
+                "ConnectedServiceName": "$(Parameters.ConnectedServiceName)",
+                "PublishProfilePath": "$(System.DefaultWorkingDirectory)/**/*.pubxml",
+                "PublishProfilePassword": "",
+                "WebAppKind": "$(Parameters.WebAppKind)",
+                "WebAppName": "$(Parameters.WebAppName)",
+                "DeployToSlotOrASEFlag": "false",
+                "ResourceGroupName": "",
+                "SlotName": "production",
+                "DockerNamespace": "$(Parameters.DockerNamespace)",
+                "DockerRepository": "$(Parameters.DockerRepository)",
+                "DockerImageTag": "$(Build.BuildId)",
+                "VirtualApplication": "",
+                "Package": "$(System.DefaultWorkingDirectory)/**/*.zip",
+                "RuntimeStack": "",
+                "RuntimeStackFunction": "",
+                "StartupCommand": "$(Parameters.StartupCommand)",
+                "ScriptType": "",
+                "InlineScript": "",
+                "ScriptPath": "",
+                "WebConfigParameters": "",
+                "AppSettings": "",
+                "ConfigurationSettings": "",
+                "UseWebDeploy": "false",
+                "DeploymentType": "webDeploy",
+                "TakeAppOfflineFlag": "true",
+                "SetParametersFile": "",
+                "RemoveAdditionalFilesFlag": "false",
+                "ExcludeFilesFromAppDataFlag": "false",
+                "AdditionalArguments": "",
+                "RenameFilesFlag": "true",
+                "XmlTransformation": "false",
+                "XmlVariableSubstitution": "false",
+                "JSONFiles": ""
+              }
+            }
+          ]
+        }
+      ],
+      "environmentOptions": {
+        "emailNotificationType": "OnlyOnFailure",
+        "emailRecipients": "release.environment.owner;release.creator",
+        "skipArtifactsDownload": false,
+        "timeoutInMinutes": 0,
+        "enableAccessToken": false,
+        "publishDeploymentStatus": true,
+        "badgeEnabled": false,
+        "autoLinkWorkItems": false,
+        "pullRequestDeploymentEnabled": false
+      },
+      "demands": [],
+      "conditions": [
+        {
+          "name": "ReleaseStarted",
+          "conditionType": 1,
+          "value": ""
+        }
+      ],
+      "executionPolicy": {
+        "concurrencyCount": 1,
+        "queueDepthCount": 0
+      },
+      "schedules": [],
+      "currentRelease": {
+        "id": 8,
+        "url": "https://vsrm.dev.azure.com/azure-everything/56ca2b5d-ebb3-4052-9fb4-00c5829683dc/_apis/Release/releases/8",
+        "_links": {}
+      },
+      "retentionPolicy": {
+        "daysToKeep": 30,
+        "releasesToKeep": 3,
+        "retainBuild": true
+      },
+      "processParameters": {
+        "inputs": [
+          {
+            "aliases": [],
+            "options": {},
+            "properties": {},
+            "name": "ConnectedServiceName",
+            "label": "Azure subscription",
+            "defaultValue": "26f08224-85d9-4ff5-af05-7df69eb3c76a",
+            "required": true,
+            "type": "connectedService:AzureRM",
+            "helpMarkDown": "Select the Azure Resource Manager subscription for the deployment.",
+            "visibleRule": "",
+            "groupName": ""
+          },
+          {
+            "aliases": [],
+            "options": {
+              "webApp": "Web App on Windows",
+              "webAppLinux": "Web App on Linux",
+              "webAppContainer": "Web App for Containers (Linux)",
+              "functionApp": "Function App on Windows",
+              "functionAppLinux": "Function App on Linux",
+              "functionAppContainer": "Function App for Containers (Linux)",
+              "apiApp": "API App",
+              "mobileApp": "Mobile App"
+            },
+            "properties": { "EditableOptions": "false" },
+            "name": "WebAppKind",
+            "label": "App type",
+            "defaultValue": "webApp",
+            "type": "pickList",
+            "helpMarkDown": "",
+            "groupName": ""
+          },
+          {
+            "aliases": [],
+            "options": {},
+            "properties": { "EditableOptions": "True" },
+            "name": "WebAppName",
+            "label": "App service name",
+            "defaultValue": "feedback-demo",
+            "required": true,
+            "type": "pickList",
+            "helpMarkDown": "Enter or select the name of an existing Azure App Service.",
+            "visibleRule": "",
+            "groupName": ""
+          },
+          {
+            "aliases": [],
+            "options": {},
+            "properties": {},
+            "name": "DockerNamespace",
+            "label": "Registry or Namespace",
+            "defaultValue": "",
+            "required": true,
+            "type": "string",
+            "helpMarkDown": "A globally unique top-level domain name for your specific registry or namespace.<br/> Note: Fully qualified image name will be of the format: '<b>`<registry or namespace`></b>/`<repository`>:`<tag`>'. For example, '<b>myregistry.azurecr.io</b>/nginx:latest'.",
+            "visibleRule": "WebAppKind = webAppContainer || WebAppkind = functionAppContainer",
+            "groupName": ""
+          },
+          {
+            "aliases": [],
+            "options": {},
+            "properties": {},
+            "name": "DockerRepository",
+            "label": "Repository",
+            "defaultValue": "",
+            "required": true,
+            "type": "string",
+            "helpMarkDown": "Name of the repository where the container images are stored.<br/> Note: Fully qualified image name will be of the format: '`<registry or namespace`>/<b>`<repository`></b>:`<tag`>'. For example, 'myregistry.azurecr.io/<b>nginx</b>:latest'.",
+            "visibleRule": "WebAppKind = webAppContainer || WebAppkind = functionAppContainer",
+            "groupName": ""
+          },
+          {
+            "aliases": [],
+            "options": {},
+            "properties": {},
+            "name": "StartupCommand",
+            "label": "Startup command",
+            "defaultValue": "",
+            "type": "string",
+            "helpMarkDown": "Enter the start up command. For ex.<br/>dotnet run<br/>dotnet filename.dll",
+            "visibleRule": "WebAppKind = webAppLinux || WebAppKind = webAppContainer || WebAppkind = functionAppContainer || WebAppKind = functionAppLinux",
+            "groupName": ""
+          }
+        ],
+        "dataSourceBindings": [
+          {
+            "dataSourceName": "AzureRMWebAppNamesByAppType",
+            "parameters": { "WebAppKind": "$(WebAppKind)" },
+            "endpointId": "$(ConnectedServiceName)",
+            "target": "WebAppName"
+          }
+        ]
+      },
+      "properties": {
+        "BoardsEnvironmentType": {
+          "$type": "System.String",
+          "$value": "unmapped"
+        },
+        "LinkBoardsWorkItems": {
+          "$type": "System.String",
+          "$value": "False"
+        }
+      },
+      "preDeploymentGates": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      },
+      "postDeploymentGates": {
+        "id": 0,
+        "gatesOptions": null,
+        "gates": []
+      },
+      "environmentTriggers": [],
+      "badgeUrl": "https://vsrm.dev.azure.com/azure-everything/_apis/public/Release/badge/56ca2b5d-ebb3-4052-9fb4-00c5829683dc/3/3"
+    }
+  ],
+  "artifacts": [
+    {
+      "sourceId": "56ca2b5d-ebb3-4052-9fb4-00c5829683dc:7",
+      "type": "Build",
+      "alias": "_Feedback-Production",
+      "definitionReference": {
+        "artifactSourceDefinitionUrl": {
+          "id": "https://dev.azure.com/azure-everything/_permalink/_build/index?collectionId=4627cf4a-2829-4b38-b8fb-2b6fecc23194&projectId=56ca2b5d-ebb3-4052-9fb4-00c5829683dc&definitionId=7",
+          "name": ""
+        },
+        "defaultVersionBranch": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionSpecific": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionTags": {
+          "id": "",
+          "name": ""
+        },
+        "defaultVersionType": {
+          "id": "latestType",
+          "name": "Latest"
+        },
+        "definition": {
+          "id": "7",
+          "name": "Feedback-Production"
+        },
+        "definitions": {
+          "id": "",
+          "name": ""
+        },
+        "IsMultiDefinitionType": {
+          "id": "False",
+          "name": "False"
+        },
+        "project": {
+          "id": "56ca2b5d-ebb3-4052-9fb4-00c5829683dc",
+          "name": "Feedback"
+        },
+        "repository": {
+          "id": "",
+          "name": ""
+        }
+      },
+      "isPrimary": true,
+      "isRetained": false
+    }
+  ],
+  "triggers": [],
+  "releaseNameFormat": "Release-$(rev:r)",
+  "tags": [],
+  "properties": {
+    "DefinitionCreationSource": {
+      "$type": "System.String",
+      "$value": "ReleaseNew"
+    },
+    "IntegrateBoardsWorkItems": {
+      "$type": "System.String",
+      "$value": "False"
+    },
+    "IntegrateJiraWorkItems": {
+      "$type": "System.String",
+      "$value": "false"
+    }
+  },
+  "id": 3,
+  "name": "Feeback-Release",
+  "path": "\\",
+  "projectReference": null,
+  "url": "https://vsrm.dev.azure.com/azure-everything/56ca2b5d-ebb3-4052-9fb4-00c5829683dc/_apis/Release/definitions/3",
+  "_links": {
+    "self": { "href": "https://vsrm.dev.azure.com/azure-everything/56ca2b5d-ebb3-4052-9fb4-00c5829683dc/_apis/Release/definitions/3" },
+    "web": { "href": "https://dev.azure.com/azure-everything/56ca2b5d-ebb3-4052-9fb4-00c5829683dc/_release?definitionId=3" }
+  }
+}

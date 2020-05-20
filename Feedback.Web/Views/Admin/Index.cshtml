@@ -1,0 +1,77 @@
+﻿ 
+
+@model IEnumerable<Feedback.Models.Feedback.Feedback>
+
+<div class="govuk-width-container app-width-container--wide">
+
+    <form asp-controller="Feedback" asp-action="UserAddress" method="post">
+
+        <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+
+
+            <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--xl">
+                    Users feedback list
+                </label>
+            </h1>
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.HomeAddress)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.HappyWithLevelOfLighting)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.LevelOfBrightness)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CreatedOn)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.HomeAddress)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.HappyWithLevelOfLighting)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LevelOfBrightness)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.CreatedOn)
+                            </td>
+
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+
+        </main>
+
+    </form>
+
+</div>

@@ -1,0 +1,116 @@
+﻿@model Feedback.Web.ViewModels.CheckYourAnswers
+@{
+    var invalid = Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid;
+}
+<div class="govuk-width-container">
+
+    <partial name="Buttons/backbutton" model="@Model.BackButton" />
+    <form asp-controller="Feedback" asp-action="CheckYourAnswerSave" method="post">
+        <partial name="Errors/SummaryError" model="@Model" />
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                    <h1 class="govuk-heading-xl">Check your answers before sending your feedback</h1>
+                    <div class="govuk-form-group @(ViewData.ModelState.GetFieldValidationState("Confirm") == invalid ? "govuk-form-group--error" : "")">
+                        @if (ViewData.ModelState.GetFieldValidationState("Confirm") == invalid)
+                        {
+                            <span id="national-insurance-number-error" class="govuk-error-message">
+                                <span class="govuk-visually-hidden">Error:</span> <span asp-validation-for="Confirm"></span>
+                            </span>
+                        }
+                        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Name
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    @Model.FullName
+                                </dd>
+                                <dd class="govuk-summary-list__actions">
+                                    <a class="govuk-link" asp-controller="Feedback" asp-action="UserName">
+                                        Change<span class="govuk-visually-hidden"> name</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Email address
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    @Model.EmailAddress
+                                </dd>
+                                <dd class="govuk-summary-list__actions">
+                                    <a class="govuk-link" asp-controller="Feedback" asp-action="UserEmail">
+                                        Change<span class="govuk-visually-hidden"> email address</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Home postcode
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    @Model.HomePostcode
+                                </dd>
+                                <dd class="govuk-summary-list__actions">
+                                    <a class="govuk-link" asp-controller="Feedback" asp-action="UserPostcode">
+                                        Change<span class="govuk-visually-hidden"> postcode </span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Home address
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    @Model.HomeAddress
+                                </dd>
+                                <dd class="govuk-summary-list__actions">
+                                    <a class="govuk-link" asp-controller="Feedback" asp-action="UserAddress">
+                                        Change<span class="govuk-visually-hidden"> address</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Happy with level of lighting
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    @Model.HappyLevelOfLighting
+                                </dd>
+                                <dd class="govuk-summary-list__actions">
+                                    <a class="govuk-link" asp-controller="Feedback" asp-action="HappyLevelLight">
+                                        Change<span class="govuk-visually-hidden"> happy with level of lighting</span>
+                                    </a>
+                                </dd>
+                            </div>
+                            <div class="govuk-summary-list__row">
+                                <dt class="govuk-summary-list__key">
+                                    Level of brightness
+                                </dt>
+                                <dd class="govuk-summary-list__value">
+                                    @Model.LevelOfBrightness (out of 10)
+                                </dd>
+                                <dd class="govuk-summary-list__actions">
+                                    <a class="govuk-link" asp-controller="Feedback" asp-action="BrightnessScore">
+                                        Change<span class="govuk-visually-hidden"> level of brightness</span>
+                                    </a>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <h2 class="govuk-heading-m">Now send your feedback</h2>
+
+                    <p class="govuk-body">By submitting this feedback you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+
+                    <partial name="Buttons/continue" />
+                </div>
+
+            </div>
+        </main>
+    </form>
+</div>
+
+

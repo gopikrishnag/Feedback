@@ -1,0 +1,395 @@
+{
+  "options": [
+    {
+      "enabled": true,
+      "definition": { "id": "5d58cc01-7c75-450c-be18-a388ddb129ec" },
+      "inputs": {
+        "branchFilters": "[\"+refs/heads/*\"]",
+        "additionalFields": "{}"
+      }
+    },
+    {
+      "enabled": false,
+      "definition": { "id": "a9db38f9-9fdc-478c-b0f9-464221e58316" },
+      "inputs": {
+        "workItemType": "Issue",
+        "assignToRequestor": "true",
+        "additionalFields": "{}"
+      }
+    }
+  ],
+  "variables": {
+    "BuildConfiguration": {
+      "value": "Release",
+      "allowOverride": true
+    },
+    "BuildPlatform": {
+      "value": "any cpu",
+      "allowOverride": true
+    },
+    "system.debug": {
+      "value": "false",
+      "allowOverride": true
+    }
+  },
+  "properties": {},
+  "tags": [],
+  "_links": {
+    "self": { "href": "https://dev.azure.com/azure-everything/56ca2b5d-ebb3-4052-9fb4-00c5829683dc/_apis/build/Definitions/7?revision=8" },
+    "web": { "href": "https://dev.azure.com/azure-everything/56ca2b5d-ebb3-4052-9fb4-00c5829683dc/_build/definition?definitionId=7" },
+    "editor": { "href": "https://dev.azure.com/azure-everything/56ca2b5d-ebb3-4052-9fb4-00c5829683dc/_build/designer?id=7&_a=edit-build-definition" },
+    "badge": { "href": "https://dev.azure.com/azure-everything/56ca2b5d-ebb3-4052-9fb4-00c5829683dc/_apis/build/status/7" }
+  },
+  "buildNumberFormat": "$(date:yyyyMMdd)$(rev:.r)",
+  "jobAuthorizationScope": 1,
+  "jobTimeoutInMinutes": 60,
+  "jobCancelTimeoutInMinutes": 5,
+  "process": {
+    "phases": [
+      {
+        "steps": [
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Restore",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "5541a522-603c-47ad-91fc-a4b1d163081b",
+              "versionSpec": "2.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "command": "restore",
+              "publishWebProjects": "true",
+              "projects": "$(Parameters.RestoreBuildProjects)",
+              "custom": "",
+              "arguments": "",
+              "restoreArguments": "",
+              "publishTestResults": "true",
+              "testRunTitle": "",
+              "zipAfterPublish": "true",
+              "modifyOutputPath": "true",
+              "selectOrConfig": "select",
+              "feedRestore": "",
+              "includeNuGetOrg": "true",
+              "nugetConfigPath": "nuget.config",
+              "externalEndpoints": "",
+              "noCache": "false",
+              "packagesDirectory": "",
+              "verbosityRestore": "Detailed",
+              "searchPatternPush": "$(Build.ArtifactStagingDirectory)/*.nupkg",
+              "nuGetFeedType": "internal",
+              "feedPublish": "",
+              "publishPackageMetadata": "true",
+              "externalEndpoint": "",
+              "searchPatternPack": "**/*.csproj",
+              "configurationToPack": "$(BuildConfiguration)",
+              "outputDir": "$(Build.ArtifactStagingDirectory)",
+              "nobuild": "false",
+              "includesymbols": "false",
+              "includesource": "false",
+              "versioningScheme": "off",
+              "versionEnvVar": "",
+              "requestedMajorVersion": "1",
+              "requestedMinorVersion": "0",
+              "requestedPatchVersion": "0",
+              "buildProperties": "",
+              "verbosityPack": "Detailed",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Build",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "5541a522-603c-47ad-91fc-a4b1d163081b",
+              "versionSpec": "2.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "command": "build",
+              "publishWebProjects": "true",
+              "projects": "$(Parameters.RestoreBuildProjects)",
+              "custom": "",
+              "arguments": "--configuration $(BuildConfiguration)",
+              "restoreArguments": "",
+              "publishTestResults": "true",
+              "testRunTitle": "",
+              "zipAfterPublish": "true",
+              "modifyOutputPath": "true",
+              "selectOrConfig": "select",
+              "feedRestore": "",
+              "includeNuGetOrg": "true",
+              "nugetConfigPath": "",
+              "externalEndpoints": "",
+              "noCache": "false",
+              "packagesDirectory": "",
+              "verbosityRestore": "Detailed",
+              "searchPatternPush": "$(Build.ArtifactStagingDirectory)/*.nupkg",
+              "nuGetFeedType": "internal",
+              "feedPublish": "",
+              "publishPackageMetadata": "true",
+              "externalEndpoint": "",
+              "searchPatternPack": "**/*.csproj",
+              "configurationToPack": "$(BuildConfiguration)",
+              "outputDir": "$(Build.ArtifactStagingDirectory)",
+              "nobuild": "false",
+              "includesymbols": "false",
+              "includesource": "false",
+              "versioningScheme": "off",
+              "versionEnvVar": "",
+              "requestedMajorVersion": "1",
+              "requestedMinorVersion": "0",
+              "requestedPatchVersion": "0",
+              "buildProperties": "",
+              "verbosityPack": "Detailed",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Test",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "5541a522-603c-47ad-91fc-a4b1d163081b",
+              "versionSpec": "2.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "command": "test",
+              "publishWebProjects": "true",
+              "projects": "$(Parameters.TestProjects)",
+              "custom": "",
+              "arguments": "--configuration $(BuildConfiguration)",
+              "restoreArguments": "",
+              "publishTestResults": "true",
+              "testRunTitle": "",
+              "zipAfterPublish": "true",
+              "modifyOutputPath": "true",
+              "selectOrConfig": "select",
+              "feedRestore": "",
+              "includeNuGetOrg": "true",
+              "nugetConfigPath": "",
+              "externalEndpoints": "",
+              "noCache": "false",
+              "packagesDirectory": "",
+              "verbosityRestore": "Detailed",
+              "searchPatternPush": "$(Build.ArtifactStagingDirectory)/*.nupkg",
+              "nuGetFeedType": "internal",
+              "feedPublish": "",
+              "publishPackageMetadata": "true",
+              "externalEndpoint": "",
+              "searchPatternPack": "**/*.csproj",
+              "configurationToPack": "$(BuildConfiguration)",
+              "outputDir": "$(Build.ArtifactStagingDirectory)",
+              "nobuild": "false",
+              "includesymbols": "false",
+              "includesource": "false",
+              "versioningScheme": "off",
+              "versionEnvVar": "",
+              "requestedMajorVersion": "1",
+              "requestedMinorVersion": "0",
+              "requestedPatchVersion": "0",
+              "buildProperties": "",
+              "verbosityPack": "Detailed",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": false,
+            "displayName": "Publish",
+            "timeoutInMinutes": 0,
+            "condition": "succeeded()",
+            "task": {
+              "id": "5541a522-603c-47ad-91fc-a4b1d163081b",
+              "versionSpec": "2.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "command": "publish",
+              "publishWebProjects": "True",
+              "projects": "$(Parameters.RestoreBuildProjects)",
+              "custom": "",
+              "arguments": "--configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)",
+              "restoreArguments": "",
+              "publishTestResults": "true",
+              "testRunTitle": "",
+              "zipAfterPublish": "True",
+              "modifyOutputPath": "true",
+              "selectOrConfig": "select",
+              "feedRestore": "",
+              "includeNuGetOrg": "true",
+              "nugetConfigPath": "",
+              "externalEndpoints": "",
+              "noCache": "false",
+              "packagesDirectory": "",
+              "verbosityRestore": "Detailed",
+              "searchPatternPush": "$(Build.ArtifactStagingDirectory)/*.nupkg",
+              "nuGetFeedType": "internal",
+              "feedPublish": "",
+              "publishPackageMetadata": "true",
+              "externalEndpoint": "",
+              "searchPatternPack": "**/*.csproj",
+              "configurationToPack": "$(BuildConfiguration)",
+              "outputDir": "$(Build.ArtifactStagingDirectory)",
+              "nobuild": "false",
+              "includesymbols": "false",
+              "includesource": "false",
+              "versioningScheme": "off",
+              "versionEnvVar": "",
+              "requestedMajorVersion": "1",
+              "requestedMinorVersion": "0",
+              "requestedPatchVersion": "0",
+              "buildProperties": "",
+              "verbosityPack": "Detailed",
+              "workingDirectory": ""
+            }
+          },
+          {
+            "environment": {},
+            "enabled": true,
+            "continueOnError": false,
+            "alwaysRun": true,
+            "displayName": "Publish Artifact",
+            "timeoutInMinutes": 0,
+            "condition": "succeededOrFailed()",
+            "task": {
+              "id": "2ff763a7-ce83-4e1f-bc89-0ae63477cebe",
+              "versionSpec": "1.*",
+              "definitionType": "task"
+            },
+            "inputs": {
+              "PathtoPublish": "$(build.artifactstagingdirectory)",
+              "ArtifactName": "drop",
+              "ArtifactType": "Container",
+              "TargetPath": "\\\\my\\share\\$(Build.DefinitionName)\\$(Build.BuildNumber)",
+              "Parallel": "false",
+              "ParallelCount": "8",
+              "FileCopyOptions": ""
+            }
+          }
+        ],
+        "name": "Build the projects",
+        "refName": "Job_1",
+        "condition": "succeeded()",
+        "target": {
+          "queue": {
+            "_links": { "self": { "href": "https://dev.azure.com/azure-everything/_apis/build/Queues/18" } },
+            "id": 18,
+            "url": "https://dev.azure.com/azure-everything/_apis/build/Queues/18",
+            "pool": null
+          },
+          "agentSpecification": { "identifier": "windows-2019" },
+          "executionOptions": { "type": 0 },
+          "allowScriptsAuthAccessOption": false,
+          "type": 1
+        },
+        "jobAuthorizationScope": 1
+      }
+    ],
+    "target": { "agentSpecification": { "identifier": "windows-2019" } },
+    "type": 1
+  },
+  "repository": {
+    "properties": {
+      "cleanOptions": "0",
+      "labelSources": "0",
+      "labelSourcesFormat": "$(build.buildNumber)",
+      "reportBuildStatus": "true",
+      "gitLfsSupport": "false",
+      "skipSyncSource": "false",
+      "checkoutNestedSubmodules": "false",
+      "fetchDepth": "0"
+    },
+    "id": "4b6d23b0-9fe4-4b66-8af5-769569e12a5e",
+    "type": "TfsGit",
+    "name": "Feedback",
+    "url": "https://dev.azure.com/azure-everything/Feedback/_git/Feedback",
+    "defaultBranch": "refs/heads/Develop",
+    "clean": "false",
+    "checkoutSubmodules": false
+  },
+  "processParameters": {
+    "inputs": [
+      {
+        "aliases": [],
+        "options": {},
+        "properties": {},
+        "name": "RestoreBuildProjects",
+        "label": "Project(s) to restore and build",
+        "defaultValue": "**/*.csproj",
+        "type": "multiline",
+        "helpMarkDown": "Relative path of the .csproj file(s) from repo root. Wildcards can be used. For example, **/*.csproj for all .csproj files in all the subfolders.",
+        "visibleRule": "",
+        "groupName": ""
+      },
+      {
+        "aliases": [],
+        "options": {},
+        "properties": {},
+        "name": "TestProjects",
+        "label": "Project(s) to test",
+        "defaultValue": "**/*[Tt]ests/*.csproj",
+        "type": "multiline",
+        "helpMarkDown": "Relative path of the .csproj file(s) from repo root. Wildcards can be used. For example, **/*.csproj for all .csproj files in all the subfolders.",
+        "visibleRule": "",
+        "groupName": ""
+      }
+    ]
+  },
+  "quality": 1,
+  "authoredBy": {
+    "displayName": "Gopi",
+    "url": "https://spsproduks1.vssps.visualstudio.com/A0490a459-e2ff-4fa9-a8ef-30a260b110c5/_apis/Identities/22b68ab3-e316-4092-9472-ade4bb921cd2",
+    "_links": { "avatar": { "href": "https://dev.azure.com/azure-everything/_apis/GraphProfile/MemberAvatars/msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi" } },
+    "id": "22b68ab3-e316-4092-9472-ade4bb921cd2",
+    "uniqueName": "gopi_krishnag@hotmail.com",
+    "imageUrl": "https://dev.azure.com/azure-everything/_apis/GraphProfile/MemberAvatars/msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi",
+    "descriptor": "msa.YTM4MWNmOGQtN2RlMy03OTBmLTk1NjktYzYzMTUzY2Q5OWRi"
+  },
+  "drafts": [],
+  "queue": {
+    "_links": { "self": { "href": "https://dev.azure.com/azure-everything/_apis/build/Queues/18" } },
+    "id": 18,
+    "name": "Azure Pipelines",
+    "url": "https://dev.azure.com/azure-everything/_apis/build/Queues/18",
+    "pool": {
+      "id": 9,
+      "name": "Azure Pipelines",
+      "isHosted": true
+    }
+  },
+  "id": 7,
+  "name": "Feedback-Production",
+  "url": "https://dev.azure.com/azure-everything/56ca2b5d-ebb3-4052-9fb4-00c5829683dc/_apis/build/Definitions/7?revision=8",
+  "uri": "vstfs:///Build/Definition/7",
+  "path": "\\",
+  "type": 2,
+  "queueStatus": 0,
+  "revision": 8,
+  "createdDate": "2020-04-07T11:34:47.337Z",
+  "project": {
+    "id": "56ca2b5d-ebb3-4052-9fb4-00c5829683dc",
+    "name": "Feedback",
+    "url": "https://dev.azure.com/azure-everything/_apis/projects/56ca2b5d-ebb3-4052-9fb4-00c5829683dc",
+    "state": 1,
+    "revision": 20,
+    "visibility": 0,
+    "lastUpdateTime": "2020-04-03T11:44:28.467Z"
+  }
+}

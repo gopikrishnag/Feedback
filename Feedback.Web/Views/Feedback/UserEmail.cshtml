@@ -1,0 +1,44 @@
+﻿@model Feedback.Web.ViewModels.UserEmail
+
+@{
+    var invalid = Microsoft.AspNetCore.Mvc.ModelBinding.ModelValidationState.Invalid;
+}
+
+<div class="govuk-width-container app-width-container--wide">
+
+    <partial name="Buttons/backbutton" model="@Model.BackButton" />
+
+    <form asp-controller="Feedback" asp-action="UserEmail" method="post">
+        <partial name="Errors/SummaryError" model="@Model" />
+        <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+
+            <div class="govuk-form-group @(ViewData.ModelState.GetFieldValidationState("Email") == invalid ? "govuk-form-group--error" : "")">
+                <h1 class="govuk-label-wrapper">
+                    <label class="govuk-label govuk-label--xl" asp-for="Email">
+                        Email
+                    </label>
+                </h1>
+                <span id="email1" class="govuk-hint">
+                    We’ll only use this to send you updates regarding your feedback
+                </span>
+                @if (ViewData.ModelState.GetFieldValidationState("Email") == invalid)
+                {
+                    <span id="national-insurance-number-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> <span asp-validation-for="Email"></span>
+                    </span>
+                }
+                <input class="govuk-input govuk-!-width-three-quarters @(ViewData.ModelState.GetFieldValidationState("Email") == invalid ? "govuk-input--error" : "")" asp-for="Email" aria-describedby="email-hint"   spellcheck="false">
+            </div>
+
+            <partial name="Buttons/continue" />
+
+        </main>
+
+    </form>
+
+</div>
+
+
+
+ 
+    
