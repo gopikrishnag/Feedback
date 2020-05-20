@@ -10,6 +10,8 @@ This is a demo project and developed according to GDS (https://design-system.ser
 
 # Build and Test
 1. Azure pipe-line configured.  
+2. http://feedback-demo.azurewebsites.net/ 
+3. For Admin Access - username : gopi pwd :goodluck1
 
 # References
 1. https://api-full.addressian.co.uk/address/
