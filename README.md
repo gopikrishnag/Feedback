@@ -14,5 +14,10 @@ This is a demo project and developed according to GDS (https://design-system.ser
 # References
 1. https://api-full.addressian.co.uk/address/
 2. https://dotnet.microsoft.com/download
+3. https://azure.microsoft.com/en-gb/services/cache/
+4. https://azure.microsoft.com/en-gb/services/app-service/web/
+5. https://azure.microsoft.com/en-gb/services/sql-database/
+6. https://docs.microsoft.com/en-us/ef/core/
+7. https://azure.microsoft.com/en-gb/services/devops/pipelines/
  
  
